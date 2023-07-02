@@ -18,7 +18,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///movies-collection.db"
 Bootstrap(app)
 db = SQLAlchemy(app)
 
-print(os.getenv('TEST'))
 class Movie(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(250), unique=True)
